@@ -29,10 +29,10 @@
                                 <form method="POST" action="{{ route('register') }}" class="w-100">
                                     @csrf
                                     <div class="mb-4 d-flex flex-column px-5">
-                                        <x-input-label for="userName" :value="__('Name')" />
-                                        <x-text-input id="userName" class="block mt-1 w-full" type="text"
-                                            name="userName" required autofocus autocomplete="userName" />
-                                        <x-input-error :messages="$errors->get('userName')" class="mt-2" />
+                                        <x-input-label for="name" :value="__('Name')" />
+                                        <x-text-input id="name" class="block mt-1 w-full" type="text"
+                                            name="name" required autofocus autocomplete="userName" />
+                                        <x-input-error :messages="$errors->get('name')" class="mt-2" />
                                     </div>
                                     {{-- email --}}
                                     <div class="mb-4 d-flex flex-column px-5">
@@ -43,10 +43,17 @@
                                     </div>
                                     {{-- password --}}
                                     <div class="mb-4 d-flex flex-column px-5">
-                                        <x-input-label for="email" :value="__('Password')" />
+                                        <x-input-label for="password" :value="__('Password')" />
                                         <x-text-input id="password" class="block mt-1 w-full" type="password"
                                             name="password" required autofocus autocomplete="off" />
                                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                                    </div>
+                                    {{-- password --}}
+                                    <div class="mb-4 d-flex flex-column px-5">
+                                        <x-input-label for="passwordConfirm" :value="__('Password')" />
+                                        <x-text-input id="passwordConfirm" class="block mt-1 w-full" type="password"
+                                            name="password_confirmation" required autofocus autocomplete="off" />
+                                        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                                     </div>
                                     {{-- sign up --}}
                                     <div class="d-flex flex-column align-items-center justify-content-center mt-3">
@@ -58,7 +65,7 @@
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center mt-3">
                                         <p class="fs-4 mb-0 fw-bold">Already have an Account?</p>
-                                        <a class="text-primary fw-bold ms-2" href="{{ route("login") }}">Sign
+                                        <a class="text-primary fw-bold ms-2" href="{{ route('login') }}">Sign
                                             In</a>
                                     </div>
                                 </form>
