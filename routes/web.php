@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'master.pages.homePage');
 Route::get('/clients',[ClientController::class, "index"]);
 Route::get('/client/add',[ClientController::class, "create"]);
-// Route::post('/client',[ClientController::class, "store"]);
+Route::post('/client',[ClientController::class, "store"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
