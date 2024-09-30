@@ -11,19 +11,19 @@ class Client extends Model
 
     protected $fillable= ["first_name","last_name","email","client_image","address","city","division","zip"];
 
-    public function sscResult()
+    public function ssc()
     {
         return $this->hasOne(SscResult::class);
     }
-    public function hscResult()
+    public function hsc()
     {
         return $this->hasOne(HscResult::class);
     }
-    public function graduationResult()
+    public function graduation()
     {
         return $this->hasOne(GraduationResult::class);
     }
-    public function postGraduationResult()
+    public function postGraduation()
     {
         return $this->hasOne(PostGraduationResult::class);
     }

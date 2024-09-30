@@ -47,8 +47,7 @@ return new class extends Migration {
             $table->string("board");
             $table->unsignedBigInteger('client_id');
             $table->foreign("client_id")
-                ->references("id")
-                ->on("clients")
+                ->references("id")->on("clients")
                 ->cascadeOnUpdate()
                 ->restrictOnDelete();
             $table->timestamps();
